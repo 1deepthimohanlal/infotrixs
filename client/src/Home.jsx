@@ -12,7 +12,7 @@ function Home() {
 
   const fetchQuote = async () => {
     try {
-      const response = await fetch('http://localhost:8000/api/quote');
+      const response = await fetch('https://infotrixs-2rz3.onrender.com/api/quote');
       const data = await response.json();
       setQuote({ quote: data.quote, author: data.author });
     } catch (error) {
@@ -22,7 +22,7 @@ function Home() {
 
   const searchByAuthor = async () => {
     try {
-      const response = await fetch(`http://localhost:8000/api/quotesByAuthor?author=${searchAuthor}`);
+      const response = await fetch(`https://infotrixs-2rz3.onrender.com/api/quotesByAuthor?author=${searchAuthor}`);
       const data = await response.json();
       setSearchedQuotes(data);
     } catch (error) {
